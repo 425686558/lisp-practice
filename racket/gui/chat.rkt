@@ -1,6 +1,10 @@
 #!/usr/bin/racket
 #lang racket/gui
 
+(require ffi/unsafe
+         ffi/unsafe/define)
+
+
 (define chat-record '())
 
 (define (chat->string list-v)
