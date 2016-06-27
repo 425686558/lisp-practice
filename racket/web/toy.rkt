@@ -36,7 +36,7 @@
   (define (add-name-handler request)
     (roster-add-name!
      ROSTER (parse-name (request-bindings request)))
-    (show-roster (redirect/get)))
+    (show-roster request))
   (send/suspend/dispatch response-generator))
  
 ; render-as-itemized-list: (listof xexpr) -> xexpr
